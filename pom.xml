@@ -77,4 +77,37 @@
 		</plugins>
 	</build>
 
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+				<version>2.3</version>
+				<reportSets>
+					<reportSet>
+						<id>dual-report</id>
+						<configuration>
+							<type>range</type>
+							<range>30</range>
+						</configuration>
+						<reports>
+							<report>changelog</report>
+							<report>file-activity</report>
+							<report>dev-activity</report> 
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<scm>
+		<url>https://github.com/Marcotts/xwikirest2.git</url>
+		<developerConnection>Serge Marcotte</developerConnection>
+	</scm>
+	<description>= Header =
+
+* Bullet 1
+* Bullet 2
+* Bullet 2</description>
 </project>
